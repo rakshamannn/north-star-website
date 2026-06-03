@@ -1,0 +1,177 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #000;
+  border-bottom: 1px solid #1F1F1F;
+  width: 100%;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  height: 85px;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Logo ── */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar-logo img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* ── Nav links ── */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-left: auto;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  padding: 8px 20px;
+  height: 36px;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  cursor: pointer;
+  border-radius: 100px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.nav-btn:hover {
+  background: #161616;
+}
+
+.nav-chevron {
+  opacity: 0.6;
+  transition: transform 0.2s ease;
+}
+
+.nav-btn[aria-expanded="true"] .nav-chevron {
+  transform: rotate(180deg);
+}
+
+/* ── Divider ── */
+.nav-divider {
+  width: 1px;
+  height: 16px;
+  background: #303030;
+  margin: 0 12px;
+  flex-shrink: 0;
+}
+
+/* ── Right actions ── */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: #161616;
+  border: none;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.15s ease;
+}
+
+.icon-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 100px;
+  padding: 0.55px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.24) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.24) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.icon-btn:hover {
+  background: #202020;
+}
+
+.login-btn {
+  position: relative;
+  background: #161616;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  padding: 8px 20px;
+  height: 36px;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  cursor: pointer;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.15s ease;
+}
+
+.login-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 100px;
+  padding: 0.55px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.24) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.24) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.login-btn:hover {
+  background: #202020;
+}

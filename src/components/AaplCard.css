@@ -1,0 +1,227 @@
+:root {
+  --aapl-lime: #a3e635;
+  --aapl-loss: #fb7185;
+  --aapl-muted: #666;
+}
+
+.aapl-card {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(128px);
+  -webkit-backdrop-filter: blur(128px);
+  border: 1px solid rgba(173, 173, 173, 0.16);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 402px;
+}
+
+/* ── Header ── */
+.aapl-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px 16px 12px;
+  height: 68px;
+}
+
+.aapl-icon-btn {
+  width: 44px;
+  height: 44px;
+  background: #161616;
+  border: 0.55px solid rgba(255, 255, 255, 0.24);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  flex-shrink: 0;
+  backdrop-filter: blur(70.4px);
+  transition: background 0.15s ease;
+}
+
+.aapl-icon-btn:hover { background: #242424; }
+
+.aapl-header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.aapl-ticker {
+  font-family: 'Geist', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #fff;
+  margin: 0;
+}
+
+.aapl-company {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666;
+  margin: 0;
+}
+
+/* ── Price section ── */
+.aapl-price-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 20px 0;
+}
+
+.aapl-price-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.aapl-name {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #adadad;
+  margin: 0;
+}
+
+.aapl-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.aapl-price-main {
+  font-family: 'Geist', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.5px;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.aapl-price-cents {
+  font-family: 'Geist', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #4a4a4a;
+  font-variant-numeric: tabular-nums;
+}
+
+.aapl-change {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.aapl-change.gain { color: var(--aapl-lime); }
+.aapl-change.loss { color: var(--aapl-loss); }
+
+.aapl-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Chart ── */
+.aapl-chart-wrap {
+  position: relative;
+  height: 155px;
+  width: 100%;
+  overflow-x: hidden;
+  margin-top: 16px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.aapl-chart-svg {
+  position: absolute;
+  left: 20px;
+  top: 14px;
+  height: 134px;
+  width: calc(100% - 40px);
+  z-index: 1;
+}
+
+.aapl-scrub-dot {
+  position: absolute;
+  z-index: 3;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+}
+
+.aapl-chart-hit {
+  position: absolute;
+  left: 20px;
+  top: 14px;
+  z-index: 4;
+  height: 134px;
+  width: calc(100% - 40px);
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.aapl-axis-label {
+  position: absolute;
+  font-family: 'Geist', sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--aapl-muted);
+  pointer-events: none;
+  z-index: 2;
+  transform: translateY(-50%);
+  right: 0;
+  margin: 0;
+}
+
+.aapl-axis-label.top-right { top: 7px; }
+.aapl-axis-label.mid-right { /* top set inline */ }
+.aapl-axis-label.bottom-right { top: auto; bottom: 7px; transform: translateY(50%); }
+
+/* ── Time filters ── */
+.aapl-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px 20px;
+}
+
+.aapl-filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 100px;
+  border: none;
+  background: none;
+  font-family: 'Geist', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #404040;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.aapl-filter-btn:hover { color: rgba(255, 255, 255, 0.75); }
+
+.aapl-filter-btn.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}

@@ -1,0 +1,53 @@
+.features-bar {
+  background: #000;
+  border-bottom: 1px solid #27272a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.features-inner {
+  width: 1200px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-left: 1px dashed #27272a;
+  border-right: 1px dashed #27272a;
+}
+
+.features-cell {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  padding: 0 60px;
+}
+
+.features-cell.has-divider {
+  border-right: 1px dashed #27272a;
+}
+
+/* Last cell has tighter padding */
+.features-cell:last-child {
+  padding: 0 32px;
+}
+
+.features-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.features-label {
+  font-family: 'Geist', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+}

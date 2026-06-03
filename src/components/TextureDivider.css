@@ -1,0 +1,50 @@
+.texture-divider {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  background: #000;
+  border-bottom: 1px solid #27272a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ── Texture background ── */
+.texture-divider-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  opacity: 0.13;
+}
+
+.texture-tile {
+  width: 655px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  transform: scaleY(-1);
+}
+
+/* ── 1200px inner container with dashed borders ── */
+.texture-divider-inner {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  border-left: 1px dashed #27272a;
+  border-right: 1px dashed #27272a;
+  flex-shrink: 0;
+}
+
+/* ── Corner tick marks ── */
+.texture-corner {
+  position: absolute;
+  background: #fff;
+  pointer-events: none;
+}
+
+.tl-h { top: -1px; left: 0;   width: 6px; height: 1px; }
+.tl-v { top: -6px; left: 0;   width: 1px; height: 12px; }
+.tr-h { top: -1px; right: 0;  width: 6px; height: 1px; }
+.tr-v { top: -6px; right: 0;  width: 1px; height: 12px; }

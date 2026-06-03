@@ -1,0 +1,47 @@
+.announcement-bar {
+  position: sticky;
+  top: 85px;
+  z-index: 99;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(91, 192, 190, 0.08) 0%,
+    rgba(91, 192, 190, 0.08) 100%
+  ), #000;
+  border-bottom: 1px solid #27272a;
+}
+
+.announcement-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-left: 1px solid #27272a;
+  border-right: 1px solid #27272a;
+}
+
+.announcement-text {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5bc0be;
+  white-space: nowrap;
+}
+
+.announcement-link {
+  color: #5bc0be;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  cursor: pointer;
+}
+
+.announcement-caret {
+  opacity: 0.7;
+  color: #5bc0be;
+  display: flex;
+  align-items: center;
+}

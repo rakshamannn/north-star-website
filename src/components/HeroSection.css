@@ -1,0 +1,578 @@
+.hero-section {
+  background: #000;
+  border-bottom: 1px solid #27272a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.hero-inner {
+  width: 1200px;
+  height: 800px;
+  border-left: 1px solid #27272a;
+  border-right: 1px solid #27272a;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Left panel ── */
+.hero-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 544px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 249px;
+  padding: 12px 60px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
+.hero-heading {
+  font-family: 'Geist', sans-serif;
+  font-weight: 300;
+  font-size: 88px;
+  line-height: 0.96;
+  letter-spacing: -2.64px;
+  color: #fff;
+  width: 469px;
+  margin: 0;
+}
+
+.hero-body {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #B2B2B2;
+  width: 428px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hero-body p {
+  margin: 0;
+}
+
+/* ── CTAs ── */
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.cta-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 100px;
+  height: 48px;
+  width: 210px;
+  font-family: 'Geist', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.cta-primary:hover {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.cta-secondary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #161616;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  height: 48px;
+  width: 210px;
+  font-family: 'Geist', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  backdrop-filter: blur(70.4px);
+  -webkit-backdrop-filter: blur(70.4px);
+  transition: background 0.15s ease;
+}
+
+.cta-secondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 100px;
+  padding: 0.55px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.24) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.24) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.cta-secondary:hover {
+  background: #202020;
+}
+
+/* ── Right panel ── */
+.hero-right {
+  position: absolute;
+  left: 655px;
+  top: 68px;
+  width: 544px;
+  height: 664px;
+  overflow: hidden;
+}
+
+.hero-right-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0.5px;
+  width: 548px;
+  height: 700px;
+  overflow: hidden;
+}
+
+.hero-right-bg img {
+  position: absolute;
+  top: 0;
+  left: -40.16%;
+  width: 182.33%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-right-bg-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.hero-texture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+/* ── Glass cards ── */
+.hero-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 402px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(128px);
+  -webkit-backdrop-filter: blur(128px);
+  border: 1px solid rgba(173, 173, 173, 0.16);
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.hero-card-stock {
+  top: calc(50% - 99.5px);
+  transform: translate(-50%, -50%);
+  height: 403px;
+}
+
+.hero-card-staking {
+  top: calc(50% + 279px);
+  transform: translate(-50%, -50%);
+  height: 326px;
+}
+
+.hero-card-aapl-wrapper {
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 99.5px);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.hero-card-staking-wrapper {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 279px);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* ── Outer frame — wraps hero-inner, provides positioning anchor for corner marks ── */
+.hero-frame {
+  position: relative;
+  width: 1200px;
+  height: 800px;
+}
+
+/* ── Corner tick marks — relative to hero-frame edges ── */
+.hero-corner-tl,
+.hero-corner-tr {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.hero-corner-tl { left: -1px; }
+.hero-corner-tr { right: -1px; }
+
+.hero-corner-h {
+  position: absolute;
+  top: 0;
+  height: 1px;
+  width: 6px;
+  background: #fff;
+}
+
+.hero-corner-v {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 6px;
+  background: #fff;
+}
+
+.hero-corner-tl .hero-corner-h { left: 0; }
+.hero-corner-tl .hero-corner-v { left: 0; }
+.hero-corner-tr .hero-corner-h { right: 0; }
+.hero-corner-tr .hero-corner-v { right: 0; }
+
+/* ── Stock card ── */
+.stock-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 68px;
+  padding: 16px 16px 12px;
+}
+
+.stock-icon-btn {
+  width: 44px;
+  height: 44px;
+  background: #161616;
+  border: 0.55px solid rgba(255,255,255,0.24);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  backdrop-filter: blur(70.4px);
+}
+
+.stock-icon-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.stock-title {
+  flex: 1;
+  text-align: center;
+}
+
+.stock-ticker {
+  font-family: 'Geist', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+  margin: 0;
+}
+
+.stock-name {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+  margin: 0;
+}
+
+.stock-body {
+  padding: 16px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stock-label {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #adadad;
+  margin: 0;
+}
+
+.stock-price {
+  font-family: 'Geist', sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+.stock-price .main {
+  font-size: 32px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.stock-price .cents {
+  font-size: 20px;
+  line-height: 36px;
+  color: #666;
+}
+
+.stock-change {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #a3e635;
+  margin: 0;
+}
+
+.stock-chart {
+  height: 155px;
+  position: relative;
+}
+
+.stock-chart img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.chart-label {
+  position: absolute;
+  font-family: 'Geist', sans-serif;
+  font-size: 10px;
+  line-height: 14px;
+  color: #666;
+}
+
+.chart-label.top-right { top: 7px; right: 0; }
+.chart-label.mid-left  { top: 63px; left: 0; }
+.chart-label.bottom-right { bottom: 7px; right: -2px; }
+
+.chart-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 24px;
+  padding: 0 48px;
+  width: 370px;
+}
+
+.chart-filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 24px;
+  border-radius: 100px;
+  font-family: 'Geist', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  background: none;
+  border: none;
+  color: #404040;
+  cursor: pointer;
+}
+
+.chart-filter-btn.active {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+/* ── Staking card ── */
+.staking-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.staking-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #adadad;
+}
+
+.staking-toggle {
+  display: flex;
+  align-items: center;
+  background: #17171a;
+  border-radius: 1000px;
+  height: 40px;
+  padding: 2px;
+  gap: 8px;
+  backdrop-filter: blur(64px);
+}
+
+.toggle-item {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1000px;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.toggle-item.active {
+  background: #161616;
+  border: 0.5px solid rgba(255,255,255,0.24);
+  color: #fff;
+  font-weight: 500;
+}
+
+.toggle-item.inactive {
+  color: #adadad;
+  font-weight: 400;
+}
+
+.staking-amount {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.staking-sol {
+  font-family: 'Geist', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #fff;
+  margin: 0;
+}
+
+.staking-progress {
+  height: 4px;
+  border-radius: 100px;
+  overflow: hidden;
+  display: flex;
+}
+
+.staking-progress-filled {
+  background: #fff;
+  flex: 1;
+}
+
+.staking-progress-empty {
+  background: #27272a;
+  width: 63px;
+}
+
+.staking-pct {
+  font-family: 'Geist', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: #adadad;
+  margin: 0;
+}
+
+.staking-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.staking-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.staking-key {
+  flex: 1;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #adadad;
+  margin: 0;
+}
+
+.staking-val {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+.staking-val.teal {
+  color: #5bc0be;
+}
+
+.staking-buttons {
+  display: flex;
+  gap: 12px;
+  height: 36px;
+}
+
+.staking-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+  height: 36px;
+}
+
+.staking-btn.unstake {
+  background: #27272a;
+  color: #fff;
+}
+
+.staking-btn.stake {
+  background: #fff;
+  color: #000;
+}
