@@ -1,10 +1,11 @@
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 500;
   background: #000;
   border-bottom: 1px solid #1F1F1F;
   width: 100%;
+  overflow: visible;
 }
 
 .navbar-inner {
@@ -61,7 +62,8 @@
   transition: background 0.15s ease;
 }
 
-.nav-btn:hover {
+.nav-btn:hover,
+.nav-btn.active {
   background: #161616;
 }
 
@@ -128,7 +130,8 @@
   pointer-events: none;
 }
 
-.icon-btn:hover {
+.icon-btn:hover,
+.icon-btn.active {
   background: #202020;
 }
 
@@ -140,6 +143,9 @@
   border-radius: 100px;
   padding: 8px 20px;
   height: 36px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
   font-family: 'Geist', sans-serif;
   font-size: 14px;
   font-weight: 400;

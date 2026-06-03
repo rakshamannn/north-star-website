@@ -5,15 +5,51 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow: visible;
+  position: relative;
 }
 
 .features-inner {
+  position: relative;
   width: 1200px;
   height: 80px;
   display: flex;
   align-items: center;
   border-left: 1px dashed #27272a;
   border-right: 1px dashed #27272a;
+  overflow: visible;
+}
+
+/* ── Corner marks ── */
+.features-corner {
+  position: absolute;
+  width: 6px;
+  height: 11px;
+  pointer-events: none;
+  z-index: 600;
+}
+
+.features-corner-tl {
+  top: -1px;
+  left: -1px;
+}
+
+.features-corner-bl {
+  bottom: -1px;
+  left: -1px;
+  transform: scaleY(-1);
+}
+
+.features-corner-tr {
+  top: -1px;
+  right: -1px;
+  transform: scaleX(-1);
+}
+
+.features-corner-br {
+  bottom: -1px;
+  right: -1px;
+  transform: scale(-1, -1);
 }
 
 .features-cell {

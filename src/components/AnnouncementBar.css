@@ -1,7 +1,7 @@
 .announcement-bar {
   position: sticky;
   top: 85px;
-  z-index: 99;
+  z-index: 90;
   width: 100%;
   background: linear-gradient(
     90deg,

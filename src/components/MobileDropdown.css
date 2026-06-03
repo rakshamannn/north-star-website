@@ -1,0 +1,84 @@
+.mobile-dropdown {
+  position: fixed;
+  top: 85px;
+  right: calc(50vw - 600px);
+  z-index: 200;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: none;
+  padding: 16px;
+  overflow: hidden;
+  animation: dropdown-in 0.18s ease forwards;
+}
+
+@keyframes dropdown-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Texture background (same as TextureDivider) ── */
+.mobile-dropdown-texture {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.mobile-dropdown-texture img {
+  width: 655px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+}
+
+/* ── Inner card ── */
+.mobile-dropdown-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* ── QR code ── */
+.mobile-qr-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 7px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Text ── */
+.mobile-dropdown-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-dropdown-title {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+  margin: 0;
+}
+
+.mobile-dropdown-desc {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #8c8c8c;
+  margin: 0;
+}
