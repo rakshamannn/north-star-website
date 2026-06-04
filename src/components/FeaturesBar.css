@@ -30,24 +30,24 @@
 }
 
 .features-corner-tl {
-  top: -1px;
+  top: -5px;
   left: -1px;
 }
 
 .features-corner-bl {
-  bottom: -1px;
+  bottom: -5px;
   left: -1px;
   transform: scaleY(-1);
 }
 
 .features-corner-tr {
-  top: -1px;
+  top: -5px;
   right: -1px;
   transform: scaleX(-1);
 }
 
 .features-corner-br {
-  bottom: -1px;
+  bottom: -5px;
   right: -1px;
   transform: scale(-1, -1);
 }

@@ -1,0 +1,272 @@
+/* ── Outer wrapper ── */
+.yield-section {
+  background: #000;
+  border-bottom: 1px solid #27272a;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.yield-inner {
+  position: relative;
+  width: 1200px;
+  border-left: 1px solid #27272a;
+  border-right: 1px solid #27272a;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ── Sticky left ── */
+.yield-left {
+  position: sticky;
+  top: 85px;
+  width: 536px;
+  min-width: 536px;
+  height: calc(100vh - 130px);
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.yield-left-content {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.yield-slash {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: -0.42px;
+  text-transform: uppercase;
+  padding-top: 2px;
+}
+
+.yield-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.yield-category-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.yield-category {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.42px;
+  line-height: 16px;
+}
+
+.yield-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 9px;
+  border-radius: 1100px;
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  backdrop-filter: blur(70.4px);
+}
+
+.yield-badge-amber {
+  color: #e6b75e;
+  background: rgba(230, 183, 94, 0.1);
+  border: 0.55px solid rgba(230, 183, 94, 0.3);
+}
+
+.yield-badge-teal {
+  color: #5bc0be;
+  background: rgba(91, 192, 190, 0.1);
+  border: 0.55px solid rgba(91, 192, 190, 0.3);
+}
+
+.yield-heading {
+  font-family: 'Geist', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  color: #fff;
+  margin: 0;
+}
+
+.yield-desc {
+  font-family: 'Geist', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #B2B2B2;
+  margin: 0;
+}
+
+.yield-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  color: #B2B2B2;
+  text-decoration: none;
+}
+
+.yield-link:hover { color: #fff; }
+
+/* ── Scrolling right ── */
+.yield-right {
+  flex: 1;
+}
+
+/* ── Each panel wrapper ── */
+.ys-panel-wrap {
+  /* top/bottom dashed spacers handled via padding */
+}
+
+.ys-panel-visual {
+  height: 640px;
+  position: relative;
+  overflow: hidden;
+  border-left: 1px dashed #27272a;
+  border-right: 1px dashed #27272a;
+  border-top: none;
+  border-bottom: none;
+}
+
+/* 80px dashed spacer before/after each visual */
+.ys-panel-wrap::before,
+.ys-panel-wrap::after {
+  content: '';
+  display: block;
+  height: 80px;
+  border-left: 1px dashed #27272a;
+  border-right: 1px dashed #27272a;
+  box-sizing: border-box;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+/* Background landscape */
+.ys-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.ys-bg img {
+  position: absolute;
+  height: 100%;
+  left: -40.16%;
+  width: 182.33%;
+  object-fit: cover;
+  top: 0;
+}
+
+.ys-bg-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.8) 100%);
+}
+
+/* Texture overlay */
+.ys-texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+
+/* Widget (card) centered */
+.ys-widget {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Caption */
+.ys-caption {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  width: 469px;
+  background: #161616;
+  backdrop-filter: blur(70.4px);
+  border: 0.55px solid rgba(255,255,255,0.16);
+  border-radius: 12px;
+  padding: 12px 16px;
+  z-index: 3;
+}
+
+.ys-caption p {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Arrow button */
+.ys-arrow-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.16);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.ys-arrow-btn:hover { background: rgba(255,255,255,0.18); }
+
+/* ── Yield chart card ── */
+.yc-card {
+  width: 402px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(128px);
+  border: 1px solid rgba(173, 173, 173, 0.16);
+  border-radius: 16px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.yc-label { font-family: 'Geist', sans-serif; font-size: 14px; color: #adadad; margin: 0; }
+.yc-value { font-family: 'Geist', sans-serif; font-weight: 500; margin: 4px 0 0; }
+.yc-value .main { font-size: 32px; line-height: 24px; color: #fff; }
+.yc-value .cents { font-size: 20px; line-height: 36px; color: #666; }
+.yc-change { font-family: 'Geist', sans-serif; font-size: 14px; color: #e6b75e; margin: 4px 0 0; }
+
+.yc-chart { display: flex; gap: 8px; align-items: flex-end; }
+.yc-yaxis { width: 39px; flex-shrink: 0; height: 180px; display: flex; flex-direction: column; justify-content: space-between; }
+.yc-ylabel { font-family: 'Geist', sans-serif; font-size: 12px; color: #adadad; line-height: 16px; }
+.yc-bars { flex: 1; height: 180px; display: flex; align-items: flex-end; gap: 8px; }
+.yc-bar-col { flex: 1; height: 100%; display: flex; align-items: flex-end; }
+.yc-bar { width: 10px; background: #e6b75e; border-radius: 2px 2px 0 0; }
+.yc-xaxis { display: flex; justify-content: space-between; padding-left: 47px; }
+.yc-xlabel { font-family: 'Geist', sans-serif; font-size: 12px; color: #666; }

@@ -8,6 +8,37 @@
   overflow: visible;
 }
 
+/* ── Hover zones ── */
+.nav-hover-zone {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Flyout: hidden by default, shown on hover */
+.nav-flyout {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.nav-hover-zone:hover .nav-flyout,
+.nav-hover-zone[data-open] .nav-flyout {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Active button highlight on hover */
+.nav-hover-zone:hover .nav-btn,
+.nav-hover-zone[data-open] .nav-btn {
+  background: #161616;
+}
+
+.nav-hover-zone:hover .icon-btn,
+.nav-hover-zone[data-open] .icon-btn {
+  background: #202020;
+}
+
 .navbar-inner {
   max-width: 1200px;
   margin: 0 auto;

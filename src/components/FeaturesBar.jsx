@@ -14,10 +14,10 @@ export default function FeaturesBar() {
   return (
     <div className="features-bar">
       <div className="features-inner">
-        {/* Corner marks — all 4 corners of the 1200px border */}
+        {/* Corner marks — all 4 corners at border crossings */}
         <img src={linesIcon} alt="" className="features-corner features-corner-tl" aria-hidden="true" />
-        <img src={linesIcon} alt="" className="features-corner features-corner-bl" aria-hidden="true" />
         <img src={linesIcon} alt="" className="features-corner features-corner-tr" aria-hidden="true" />
+        <img src={linesIcon} alt="" className="features-corner features-corner-bl" aria-hidden="true" />
         <img src={linesIcon} alt="" className="features-corner features-corner-br" aria-hidden="true" />
 
         {FEATURES.map(({ icon, label, divider }, i) => (

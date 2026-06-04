@@ -1,0 +1,300 @@
+/* ── Outer wrapper ── */
+.scroll-section {
+  background: #000;
+  border-bottom: 1px solid #27272a;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.scroll-inner {
+  position: relative;
+  width: 1200px;
+  border-left: 1px dashed #27272a;
+  border-right: 1px dashed #27272a;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ── Sticky left ── */
+.scroll-left {
+  position: sticky;
+  top: 85px;
+  width: 536px;
+  min-width: 536px;
+  height: calc(100vh - 130px);
+  padding: 60px 60px 60px 60px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+/* ── Left items ── */
+.sl-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #1f1f1f;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.sl-item:first-child {
+  border-top: 1px solid #1f1f1f;
+}
+
+.sl-item.inactive {
+  opacity: 0.35;
+}
+
+.sl-item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sl-slash {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  color: #B2B2B2;
+  flex-shrink: 0;
+}
+
+.sl-category {
+  font-family: 'Geist', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  color: #B2B2B2;
+  text-transform: uppercase;
+}
+
+.sl-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-family: 'Geist', sans-serif;
+  border: 0.55px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.sl-badge.amber { color: #e6b75e; background: rgba(230, 183, 94, 0.08); border-color: rgba(230, 183, 94, 0.3); }
+.sl-badge.teal  { color: #5bc0be; background: rgba(91, 192, 190, 0.08); border-color: rgba(91, 192, 190, 0.3); }
+.sl-badge.white { color: #fff;    background: rgba(255, 255, 255, 0.07); }
+
+.sl-title {
+  font-family: 'Geist', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+  margin: 12px 0 0;
+}
+
+/* expanded content */
+.sl-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.sl-item.active .sl-body {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.sl-desc {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #B2B2B2;
+  margin: 12px 0 0;
+}
+
+.sl-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+.sl-link:hover { text-decoration: underline; }
+
+/* ── Right scrolling panels ── */
+.scroll-right {
+  flex: 1;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.scroll-panel {
+  width: 402px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* yield / activity card */
+.yield-card,
+.activity-card {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(128px);
+  border: 1px solid rgba(173, 173, 173, 0.16);
+  border-radius: 16px;
+  width: 402px;
+  overflow: hidden;
+}
+
+/* ── Yield card ── */
+.yield-header {
+  padding: 20px 20px 0;
+}
+
+.yield-label {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  color: #adadad;
+  margin: 0 0 4px;
+}
+
+.yield-value {
+  font-family: 'Geist', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.yield-change {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  color: #a3e635;
+  margin: 4px 0 0;
+}
+
+.yield-chart {
+  height: 180px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 16px 20px 20px;
+}
+
+.yield-bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.yield-bar {
+  border-radius: 3px 3px 0 0;
+  background: rgba(201, 177, 255, 0.6);
+  transition: height 0.3s ease;
+}
+
+/* ── Activity card ── */
+.activity-header {
+  padding: 20px 20px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.activity-title {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+
+.activity-list {
+  padding: 0 20px;
+}
+
+.activity-date {
+  font-family: 'Geist', sans-serif;
+  font-size: 12px;
+  color: #adadad;
+  padding: 12px 0 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  margin: 0;
+}
+
+.activity-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.activity-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #27272a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #adadad;
+  font-weight: 500;
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-name {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+
+.activity-time {
+  font-family: 'Geist', sans-serif;
+  font-size: 12px;
+  color: #adadad;
+  margin: 0;
+}
+
+.activity-amount {
+  text-align: right;
+}
+
+.activity-usd {
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+
+.activity-status {
+  font-family: 'Geist', sans-serif;
+  font-size: 12px;
+  color: #adadad;
+  margin: 0;
+}
+
+.activity-status.pending { color: #e6b75e; }
+.activity-status.completed { color: #a3e635; }
